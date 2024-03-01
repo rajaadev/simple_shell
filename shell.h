@@ -41,19 +41,25 @@ char *_strchr(char *, char);
 char **strtow(char *, char *);
 char **strtow2(char *, char);
 
-/* prototypes_file_memory_functions1.c  */
+/* prototypes_file_memory_functions1.c */
 char *memory_set(char *, char, unsigned int);
 void f_free(char **);
 void *_realloc(void *, unsigned int, unsigned int);
 
-/* prototype_file_memory_functions2.c  */
+/* prototype_file_memory_functions2.c */
 int my_free(void **);
 
-/* prototype_file_more_functions.c  */
+/* prototype_file_more_functions.c */
 int _atoi(char *s);
 int is_delim(char c, char *delim);
 int interactive(info_t *info);
 int _isalpha(int c);
 
+/*prototypes more_shell_functions_managing_errors.c */
+void remove_comments(char *buf);
+int _erratoi(char *s);
+char *convert_number(long int num, int base, int flags);
+void print_error(info_t *info, char *estr);
+int print_d(int input, int fd);
 
 #endif
