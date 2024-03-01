@@ -49,4 +49,11 @@ void *_realloc(void *, unsigned int, unsigned int);
 /* prototype_file_memory_functions2.c  */
 int my_free(void **);
 
+/* prototype_file_more_functions.c  */
+int _atoi(char *s);
+int is_delim(char c, char *delim);
+int interactive(info_t *info);
+int _isalpha(int c);
+
+
 #endif
