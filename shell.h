@@ -19,7 +19,7 @@ int _eputchar(char);
 int _putfd(char c, int fd);
 int _putsfd(char *str, int fd);
 
-/* prototypes_file_string_functions.c */
+/* prototypes_file_string_functions1.c */
 int _strlen(char *);
 int _strcmp(char *, char *);
 char *starts_with(const char *, const char *);
@@ -40,5 +40,13 @@ char *_strchr(char *, char);
 /* prototypes_file_string_functions4.c */
 char **strtow(char *, char *);
 char **strtow2(char *, char);
+
+/* prototypes_file_memory_functions1.c  */
+char *memory_set(char *, char, unsigned int);
+void f_free(char **);
+void *_realloc(void *, unsigned int, unsigned int);
+
+/* prototype_file_memory_functions2.c  */
+int my_free(void **);
 
 #endif
