@@ -3,7 +3,7 @@
 /**
  * **strtow - splits a string into words. Repeat delimiters are ignored
  * @st: string
- * @del: delimeter 
+ * @del: delimeter
  * Return: pointer to array of strings, or NULL on failure
  */
 
@@ -15,14 +15,14 @@ char **strtow(char *st, char *del)
 	if (st == NULL || st[0] == '\0')
 		return (NULL);
 	if (!del)
-		del= " ";
+		del = " ";
 	for (i = 0; st[i] != '\0'; i++)
 		if (!is_delim(st[i], del) && (is_delim(st[i + 1], del) || !st[i + 1]))
 			num_words++;
 
 	if (num_words == 0)
 		return (NULL);
-	s = malloc(( num_words +1) * sizeof(char *));
+	s = malloc((num_words + 1) * sizeof(char *));
 	if (!s)
 		return (NULL);
 	for (i = 0, j = 0; j < num_words; j++)
@@ -61,13 +61,8 @@ char **strtow2(char *str, char del)
 	int i, j, k, m, num_words = 0;
 	char **s;
 
-
-
 	if (str == NULL || str[0] == 0)
 		return (NULL);
-
-
-
 	for (i = 0; str[i] != '\0'; i++)
 
 		if ((str[i] != del && str[i + 1] == del) ||
@@ -93,7 +88,8 @@ char **strtow2(char *str, char del)
 			free(s);
 			return (NULL);
 		}
-		for (m = 0; m < k; m++)		s[j][m] = str[i++];
+		for (m = 0; m < k; m++)
+			s[j][m] = str[i++];
 		s[j][m] = 0;
 	}
 	s[j] = NULL;

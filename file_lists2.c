@@ -1,7 +1,8 @@
 #include "shell.h"
 
 /**
- * list_to_strings - convert linked list to  an array of strings ( list-> array str)
+ * list_to_strings - convert linked
+ * list to  an array of strings ( list-> array str)
  * @head: pointer to first node
  * Return: array of strings
  */
@@ -12,10 +13,10 @@ char **list_to_strings(list_t *head)
 	char **strs;
 	char *str;
 
-        if (!head || !i)
+	if (!head || !i)
 		return (NULL);
-        strs = malloc(sizeof(char *) * (i + 1));
-        if (!strs)
+	strs = malloc(sizeof(char *) * (i + 1));
+	if (!strs)
 		return (NULL);
 	for (i = 0; node; node = node->next, i++)
 	{
@@ -29,7 +30,7 @@ char **list_to_strings(list_t *head)
 		}
 
 		str = _strcpy(str, node->str);
-		strs[i] = str;	
+		strs[i] = str;
 	}
 	strs[i] = NULL;
 	return (strs);
@@ -58,7 +59,7 @@ size_t list_len(const list_t *h)
  * Return: size of list
  */
 size_t print_list(const list_t *h)
-{	
+{
 	size_t i = 0;
 
 	while (h)
@@ -82,16 +83,16 @@ size_t print_list(const list_t *h)
  */
 ssize_t get_node_index(list_t *head, list_t *node)
 {
-        size_t i = 0;
+	size_t i = 0;
 
-        while (head)
-        {
-                if (head == node)
-                        return (i);
-                head = head->next;
-                i++;
-        }
-        return (-1);
+	while (head)
+	{
+		if (head == node)
+			return (i);
+		head = head->next
+	i++;
+	}
+	return (-1);
 }
 
 /**

@@ -27,22 +27,23 @@ void *_realloc(void *ptr, size_t old_size, size_t new_size)
 	char *p;
 
 	if (!ptr)
-		return malloc(new_size);
-	if ( new_size == 0)
+		return (malloc(new_size));
+	if (new_size == 0)
 	{
 		free(ptr);
-		return NULL);
+		return (NULL);
 	}
 	if (new_size == old_size)
 		return (ptr);
 
 	p = malloc(new_size);
+
 	if (!p)
 		return (NULL);
 
 	size_t copy_size = old_size < new_size ? old_size : new_size;
-	for (size_t i = 0; i < copy_size; i++)
 
+	for (size_t i = 0; i < copy_size; i++)
 		p[i] = ((char *)ptr)[i];
 
 	free(ptr);
@@ -51,16 +52,16 @@ void *_realloc(void *ptr, size_t old_size, size_t new_size)
 
 /**
  **memory_set - fills memory with a constant byte
- *@s:  pointer to the memory area
- *@b:  byte to fill *s
+ *@s: pointer to the memory area
+ *@b: byte to fill *s
  *@n: numbers of bytes to be filled
  *Return: pointer to the memory area s
  */
 char *memory_set(char *s, char b, size_t n)
 {
-        size_t i;
+	size_t i;
 
-        for (i = 0; i < n; i++)
-                s[i] = b;
-        return s;
+	for (i = 0; i < n; i++)
+		s[i] = b;
+	return (s);
 }
