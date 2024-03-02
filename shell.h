@@ -131,6 +131,12 @@ void set_info(info_t *, char **);
 void free_info(info_t *, int);
 
 
+/* prototypes_file_io_functions.c */
+char *get_history_file(info_t *info);
+int write_history(info_t *info);
+int read_history(info_t *info);
+int build_history_list(info_t *info, char *buf, int linecount);
+int renumber_history(info_t *info);
 
 /*prototypes_file_err_string_functions.c*/
 void _eputs(char *);
