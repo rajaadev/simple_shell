@@ -109,6 +109,13 @@ typedef struct builtin
 } builtin_table;
 
 
+/* prototypes_file_info_structure.c */
+void clear_info(info_t *);
+void set_info(info_t *, char **);
+void free_info(info_t *, int);
+
+
+
 /*prototypes_file_err_string_functions.c*/
 void _eputs(char *);
 int _eputchar(char);
