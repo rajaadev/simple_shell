@@ -109,6 +109,14 @@ typedef struct builtin
 } builtin_table;
 
 
+/* prototype_file_builtin_emulators1.c */
+int _myexit(info_t *);
+int _mycd(info_t *);
+int _myhelp(info_t *);
+
+/* prototype_file_builtin_emulators2.c */
+int _myhistory(info_t *);
+int _myalias(info_t *);
 
 
 /* Prototypes_file_environ1.c */
