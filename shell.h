@@ -76,4 +76,11 @@ size_t print_list(const list_t *);
 list_t *node_starts_with(list_t *, char *, char);
 ssize_t get_node_index(list_t *, list_t *);
 
+/*prototypes_file_error_string_functions.c*/
+
+void _eputs(char *str);
+int _eputchar(char);
+int _putfd(char c, int fd);
+int _putsfd(char *str, int fd);
+
 #endif
