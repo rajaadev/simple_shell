@@ -109,6 +109,22 @@ typedef struct builtin
 } builtin_table;
 
 
+
+
+/* Prototypes_file_environ1.c */
+
+char *_getenv(info_t *, const char *);
+int _myenv(info_t *);
+int _mysetenv(info_t *);
+int _myunsetenv(info_t *);
+int populate_env_list(info_t *);
+
+/* Prototypes_file_environ2.c */
+char **get_environ(info_t *);
+int _unsetenv(info_t *, char *);
+int _setenv(info_t *, char *, char *);
+
+
 /* prototypes_file_info_structure.c */
 void clear_info(info_t *);
 void set_info(info_t *, char **);
